@@ -97,6 +97,7 @@ impl LifeCycleHandler for Orbital {
             let pos_vector = position(self.grab_input_action.actor().unwrap());
             let look_at =
                 Quat::from_rotation_arc(vec3(0.0, 0.0, 1.0).normalize(), pos_vector.normalize());
+            look_at.to_euler(glam::EulerRot::XYZ).1 = 0.0;
 
             self.window_field
                 .set_rotation(Some(&self.root), look_at)
