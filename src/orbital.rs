@@ -95,18 +95,26 @@ impl LifeCycleHandler for Orbital {
         self.grab_input_action.update(&mut self.hover_input_action);
         if self.grab_input_action.actor_acting() {
             let pos_vector = position(self.grab_input_action.actor().unwrap());
-            let look_at = Quat::from_rotation_arc(pos_vector, vec3(0.0, 0.0, 1.0));
+            let look_at = Quat::from_rotation_arc(vec3(0.0, 1.0, -1.0), pos_vector);
 
-            self.window_field.set_rotation(None, look_at).unwrap();
-            self.test_sphere.set_rotation(None, look_at).unwrap();
-
-            self.test_sphere
-                .set_position(
-                    Some(&self.root),
-                    Vector3::from([pos_vector.x, pos_vector.y, pos_vector.z]),
-                )
+            self.window_field
+                .set_rotation(Some(&self.root), look_at)
                 .unwrap();
-            self.grab_cube.set_rotation(None, look_at).unwrap();
+            self.window_field
+                .set_position(Some(&self.root), pos_vector)
+                .unwrap();
+            self.test_sphere
+                .set_rotation(Some(&self.root), look_at)
+                .unwrap();
+            self.test_sphere
+                .set_position(Some(&self.root), pos_vector)
+                .unwrap();
+            self.grab_cube
+                .set_position(Some(&self.root), pos_vector)
+                .unwrap();
+            self.grab_cube
+                .set_rotation(Some(&self.root), look_at)
+                .unwrap();
         }
     }
 }
