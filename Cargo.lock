@@ -742,9 +742,9 @@ dependencies = [
 
 [[package]]
 name = "stardust-xr"
-version = "0.9.0"
+version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "80780cd08fefcb6a67da0a92672fdd90f92873311940b5ca1c88b5132eaa70f7"
+checksum = "2dd05e0962751e904acb73a3c96d09311b88658c186f6a15ced1786e059bb3eb"
 dependencies = [
  "chrono",
  "cluFlock",
@@ -762,9 +762,9 @@ dependencies = [
 
 [[package]]
 name = "stardust-xr-fusion"
-version = "0.28.0"
+version = "0.28.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "009583e25bc59823abd97460f5823f4d91eb9b863665d61e3acaa91d404f02d3"
+checksum = "1c12936fdb0f2a15e69e96e89dca15ef5aad5e43046ba58fa4697b562894395f"
 dependencies = [
  "anyhow",
  "buildstructor",
@@ -786,9 +786,9 @@ dependencies = [
 
 [[package]]
 name = "stardust-xr-molecules"
-version = "0.9.0"
+version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a650a786d14068d68665701a641b0dd054d4f6317fde9d6742d17a6321e74c7"
+checksum = "ab9a5aa267fe9489d4d38a0971572f96b218db6c59c2c0b6b1bbea002aac91ac"
 dependencies = [
  "color-rs",
  "flexbuffers",
